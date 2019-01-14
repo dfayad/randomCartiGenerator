@@ -41,7 +41,36 @@ def makeLine(dictionary, wordsPerLine):
     lineStr = ' '.join(line)
     return lineStr
 
+def getRandomWord(dictionary):
+    rand = random.randint(0,len(dictionary)-1)
+    word = dictionary[rand]
+    return word
+
+def makeChorus(dictionary, wordPerLine):
+    lines = []
+    for i in range(2):
+        line = makeLine(dictionary, wordPerLine)
+        lines.append(line)
+    lines = lines + lines
+    paragraph = '\n'.join(lines)
+    return paragraph
+
+title = getRandomWord(cleanWords) + ' ' + getRandomWord(cleanWords)
+chorus = makeChorus(cleanWords, 5)
 v1 = makeVerse(cleanWords, 5, 12)
-print('HERES A VERSE')
+v2 = makeVerse(cleanWords, 6, 10)
+v3 = makeVerse(cleanWords, 4, 8)
+
+print('------------------------')
+print('Name of the song: '+title)
+print('Verse 1--------')
 print(v1)
+print('Chorus--------')
+print(chorus)
+print('Verse 2--------')
+print(v2)
+print('Chorus--------')
+print(chorus)
+print('Verse 3--------')
+print(v3)
 
