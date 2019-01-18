@@ -2,12 +2,12 @@ import lyricwikia
 import random
 
 lyrics = lyricwikia.get_lyrics('Playboi Carti', 'Magnolia')
-print(lyrics)
+#print(lyrics)
 
 
 words = lyrics.split(' ')
-print('-----')
-print(words)
+#print('-----')
+#print(words)
 
 cleanWords = []
 #remove all newline symbols
@@ -22,8 +22,8 @@ for word in words:
         cleanWords.append(word)
 
 
-print('-----------')
-print(cleanWords)
+#print('-----------')
+#print(cleanWords)
 
 def makeVerse(dictionary, numOfLines, wordPerLine):
     lines = []
