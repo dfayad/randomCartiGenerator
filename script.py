@@ -2,10 +2,13 @@ import lyricwikia
 import random
 
 lyrics = lyricwikia.get_lyrics('Playboi Carti', 'Magnolia')
+lyrics2 = lyricwikia.get_lyrics('Playboi Carti', 'New Choppa')
+lyrics3 = lyricwikia.get_lyrics('Playboi Carti', 'wokeuplikethis*')
+lyrics4 = lyricwikia.get_lyrics('Playboi Carti', 'Other Shit')
 #print(lyrics)
 
 
-words = lyrics.split(' ')
+words = lyrics.split(' ') + lyrics2.split(' ') + lyrics3.split(' ') + lyrics4.split(' ')
 #print('-----')
 #print(words)
 
