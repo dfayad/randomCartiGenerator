@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<head>
+		<title>{{ title }}</title>
+		<link rel="stylesheet" href="../static/style.css/">
+	</head>
+
+	<body>
+		<h1>Title of the song: {{title}}</h1>
+		<h2>Verse 1<h2>
+		<!--<p>{{ v1 }}</p> -->
+		{% for line in v1-%}
+			{{line}}
+			<br />
+		{%- endfor -%}
+		
+		<h2>Chorus<h2>
+		<!--<p>{{ ch1 }}</p>-->
+		{% for line in ch1-%}
+			{{line}}
+			<br />
+		{%- endfor -%}
+		
+		<h2>Verse 2<h2>
+		<!--<p>{{ v2 }}</p>-->
+		{% for line in v2-%}
+			{{line}}
+			<br />
+		{%- endfor -%}
+		
+		<h2>Chorus<h2>
+		<!--<p>{{ ch1 }}</p>-->
+		{% for line in ch1-%}
+			{{line}}
+			<br />
+		{%- endfor -%}
+		
+		<h2>Verse 3<h2>
+		<!--<p>{{ v3 }}</p>-->
+		{% for line in v3-%}
+			{{line}}
+			<br />
+		{%- endfor -%}
+	</body>
+</html>

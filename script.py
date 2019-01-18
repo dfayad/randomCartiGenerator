@@ -2,15 +2,12 @@ import lyricwikia
 import random
 
 lyrics = lyricwikia.get_lyrics('Playboi Carti', 'Magnolia')
-lyrics2 = lyricwikia.get_lyrics('Playboi Carti', 'New Choppa')
-lyrics3 = lyricwikia.get_lyrics('Playboi Carti', 'wokeuplikethis*')
-lyrics4 = lyricwikia.get_lyrics('Playboi Carti', 'Other Shit')
-#print(lyrics)
+print(lyrics)
 
 
-words = lyrics.split(' ') + lyrics2.split(' ') + lyrics3.split(' ') + lyrics4.split(' ')
-#print('-----')
-#print(words)
+words = lyrics.split(' ')
+print('-----')
+print(words)
 
 cleanWords = []
 #remove all newline symbols
@@ -25,8 +22,8 @@ for word in words:
         cleanWords.append(word)
 
 
-#print('-----------')
-#print(cleanWords)
+print('-----------')
+print(cleanWords)
 
 def makeVerse(dictionary, numOfLines, wordPerLine):
     lines = []
@@ -66,16 +63,18 @@ def getSong():
     v2 = makeVerse(cleanWords, 6, 10)
     v3 = makeVerse(cleanWords, 4, 8)
 
-    print('------------------------')
-    print('Name of the song: '+title)
-    print('Verse 1--------')
-    print(v1)
-    print('Chorus--------')
-    print(chorus)
-    print('Verse 2--------')
-    print(v2)
-    print('Chorus--------')
-    print(chorus)
-    print('Verse 3--------')
-    print(v3)
+    #print('------------------------')
+    #print('Name of the song: '+title)
+    #print('Verse 1--------')
+    #print(v1)
+    #print('Chorus--------')
+    #print(chorus)
+    #print('Verse 2--------')
+    #print(v2)
+    #print('Chorus--------')
+    #print(chorus)
+    #print('Verse 3--------')
+    #print(v3)
+
+    return title, chorus, v1, v2, v3
 
